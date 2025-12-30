@@ -1,0 +1,11 @@
+{
+  "domain": "adaptive_thermostat",
+  "name": "Adaptive Thermostat",
+  "version": "0.1.0",
+  "config_flow": true,
+  "documentation": "https://github.com/NickKibish/adaptive_thermostat",
+  "requirements": [],
+  "codeowners": ["@NickKibish"],
+  "iot_class": "local_polling",
+  "dependencies": []
+}

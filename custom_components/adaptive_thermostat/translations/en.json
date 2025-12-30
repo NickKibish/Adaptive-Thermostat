@@ -1,0 +1,63 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure Adaptive Thermostat",
+        "description": "Set up a virtual thermostat that controls a real thermostat using an external temperature sensor.",
+        "data": {
+          "real_thermostat": "Real Thermostat",
+          "temperature_sensor": "Room Temperature Sensor",
+          "price_sensor": "Electricity Price Sensor (optional)",
+          "tolerance": "Tolerance (°C)",
+          "base_shift": "Base Temperature Shift (°C)",
+          "high_setpoint": "High Setpoint (°C) - for heating ON",
+          "low_setpoint": "Low Setpoint (°C) - for heating OFF"
+        },
+        "data_description": {
+          "real_thermostat": "The physical thermostat to control",
+          "temperature_sensor": "Sensor providing actual room temperature",
+          "price_sensor": "Sensor showing price difference in % (optional)",
+          "tolerance": "Hysteresis half-width to prevent rapid cycling",
+          "base_shift": "Static temperature offset (positive = heat more)",
+          "high_setpoint": "Temperature to set when heating should be ON",
+          "low_setpoint": "Temperature to set when heating should be OFF"
+        }
+      },
+      "advanced": {
+        "title": "Advanced Price Settings",
+        "description": "Configure how price affects heating behavior",
+        "data": {
+          "max_price_shift": "Maximum Price Shift (°C)",
+          "price_steepness": "Price Curve Steepness"
+        },
+        "data_description": {
+          "max_price_shift": "Maximum temperature shift from price (default: 3.0°C)",
+          "price_steepness": "How aggressively to respond to price changes (default: 1.5)"
+        }
+      }
+    },
+    "error": {
+      "entity_not_found": "Selected entity does not exist",
+      "high_must_exceed_low": "High setpoint must be greater than low setpoint"
+    },
+    "abort": {
+      "already_configured": "This thermostat is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Adaptive Thermostat Options",
+        "description": "Adjust control parameters",
+        "data": {
+          "tolerance": "Tolerance (°C)",
+          "base_shift": "Base Temperature Shift (°C)",
+          "high_setpoint": "High Setpoint (°C)",
+          "low_setpoint": "Low Setpoint (°C)",
+          "max_price_shift": "Maximum Price Shift (°C)",
+          "price_steepness": "Price Curve Steepness"
+        }
+      }
+    }
+  }
+}
